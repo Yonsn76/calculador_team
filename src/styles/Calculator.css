@@ -93,7 +93,7 @@ body {
 
   /* Estilo para el botón de cambio de tema */
   .theme-toggle {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     width: 50px;
