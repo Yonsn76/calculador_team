@@ -78,17 +78,43 @@ body {
     --button-color: #fff;
     --button-hover: #5a6dff; /* Azul ligeramente más oscuro */
   }
-  
-  /* Modo oscuro automático */
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --background: #121212;
-      --text-color: #eaeaea;
-      --calculator-bg: #1e1e2f;
-      --display-bg: #111;
-      --display-border: #444;
-      --button-bg: #2a3dff; /* Azul más oscuro */
-      --button-color: #eaeaea;
-      --button-hover: #3b51ff; /* Azul más oscuro en hover */
-    }
+
+  /* Modo oscuro */
+  [data-theme="dark"] {
+    --background: #121212;
+    --text-color: #eaeaea;
+    --calculator-bg: #1e1e2f;
+    --display-bg: #111;
+    --display-border: #444;
+    --button-bg: #2a3dff; /* Azul más oscuro */
+    --button-color: #eaeaea;
+    --button-hover: #3b51ff; /* Azul más oscuro en hover */
+  }
+
+  /* Estilo para el botón de cambio de tema */
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: var(--calculator-bg);
+    color: var(--text-color);
+    border: 2px solid var(--button-bg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .theme-toggle:hover {
+    transform: rotate(30deg);
+  }
+
+  /* Contenedor para la calculadora y el botón de tema */
+  .calculator-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

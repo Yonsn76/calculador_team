@@ -1,0 +1,52 @@
+.animated-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--text-color, #333);
+  transition: color 0.3s;
+}
+
+.animated-title span {
+  display: inline-block;
+  transition: transform 0.3s, color 0.3s;
+  animation: float 3s ease-in-out infinite;
+}
+
+.animated-title span:nth-child(1) { animation-delay: 0.0s; }
+.animated-title span:nth-child(2) { animation-delay: 0.1s; }
+.animated-title span:nth-child(3) { animation-delay: 0.2s; }
+.animated-title span:nth-child(4) { animation-delay: 0.3s; }
+.animated-title span:nth-child(5) { animation-delay: 0.4s; }
+.animated-title span:nth-child(6) { animation-delay: 0.5s; }
+.animated-title span:nth-child(7) { animation-delay: 0.6s; }
+.animated-title span:nth-child(8) { animation-delay: 0.7s; }
+.animated-title span:nth-child(9) { animation-delay: 0.8s; }
+.animated-title span:nth-child(10) { animation-delay: 0.9s; }
+.animated-title span:nth-child(11) { animation-delay: 1.0s; }
+
+.animated-title span:hover {
+  transform: translateY(-10px) rotate(10deg);
+  color: var(--button-bg, #6f7dff);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Aseguramos que el título use los colores del tema */
+[data-theme="dark"] .animated-title {
+  color: var(--text-color, #eaeaea);
+}
+
+[data-theme="dark"] .animated-title span:hover {
+  color: var(--button-bg, #2a3dff);
+}
