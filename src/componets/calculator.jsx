@@ -14,6 +14,14 @@ const buttons = [
 
 export const Calculator = () => {
   const [input, setInput] = useState("");
+  
+  // Determine display class based on input length
+  const getDisplayClass = () => {
+    if (input.length > 15) return 'length-xl';
+    if (input.length > 10) return 'length-lg';
+    if (input.length > 8) return 'length-md';
+    return '';
+  };
 
   const handleClick = (value) => {
     const operators = ["/", "*", "-", "+"];
@@ -42,7 +50,9 @@ export const Calculator = () => {
     <div className="calculator-container">
       <ThemeToggle />
       <div className="calculator">
-        <div className="display">{input || "0"}</div>
+        <div className={`display ${getDisplayClass()}`}>
+          {input || "0"}
+        </div>
         <div className="buttons">
           {buttons.map((btn, idx) => (
             <Button key={idx} value={btn} onClick={handleClick} />

@@ -30,9 +30,25 @@ body {
     border-radius: 8px;
     border: 1px solid var(--display-border, #ccc);
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    min-height: 60px; /* Asegura una altura mínima */
+    word-wrap: break-word;
+    min-height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  /* Dynamic font sizing based on content length */
+  .display.length-md {
+    font-size: 1.8rem;
+  }
+
+  .display.length-lg {
+    font-size: 1.5rem;
+  }
+
+  .display.length-xl {
+    font-size: 1.2rem;
   }
   
   /* Contenedor de botones */
