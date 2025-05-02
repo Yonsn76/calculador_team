@@ -21,8 +21,13 @@ export const Calculator = () => {
     } else if (value === "=") {
       setInput(evaluateExpression(input));
     } else {
+      const lastChar = input[input.length - 1];
+      const operators = ["/", "*", "-", "+"];
+      if (operators.includes(value) && operators.includes(lastChar)) {
+        return;
+      }
       setInput((prev) => prev + value);
-    }
+    }    
   };
 
   return (
