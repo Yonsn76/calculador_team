@@ -1,12 +1,82 @@
-# React + Vite
+# 🧮 Calculadora en React con Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una **calculadora funcional** creada con **React + Vite** como ejercicio colaborativo entre estudiantes de desarrollo web.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👥 Equipo
 
-## Expanding the ESLint configuration
+* **Jordy** → Lógica y estado de la calculadora
+* **Mila** → Diseño visual y estructura de botones
+* **Juan** → Componente reutilizable de botones
+* **Yonsn** → Integración final y pruebas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Tecnologías utilizadas
+
+* [React](https://reactjs.org/)
+* [Vite](https://vitejs.dev/)
+* JavaScript (ES6+)
+* CSS o TailwindCSS (según preferencia del equipo)
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+src/
+├── components/
+│   ├── Button.jsx         # Componente de botón
+│   └── Calculator.jsx     # Componente principal
+├── logic/
+│   └── CalculatorLogic.js # Lógica de la calculadora
+├── styles/
+│   └── Calculator.css     # Estilos base
+├── App.jsx                # Integración general
+└── main.jsx               # Punto de entrada
+```
+
+---
+
+## ✅ Funcionalidades principales
+
+* Suma, resta, multiplicación y división
+* Botón de igual (=) para obtener el resultado
+* Botón para limpiar (C o AC)
+* Validación de expresiones
+* Interfaz amigable y responsive
+
+---
+
+## 🛠️ Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+```
+
+2. Instala dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecuta en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+---
+
+## 💬 Notas finales
+
+Este proyecto es parte de una práctica colaborativa para fortalecer habilidades en:
+
+* Componentización en React
+* Trabajo en equipo
+* Control de versiones con Git
+
+¡Gracias por visitar nuestro repositorio! 💻✨
