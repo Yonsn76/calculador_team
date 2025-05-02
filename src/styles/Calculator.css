@@ -7,28 +7,29 @@ body {
     align-items: center;
     background: var(--background, #fafafa);
     color: var(--text-color, #333);
-    transition: background 0.3s, color 0.3s;
+    transition: var(--background) 0.3s, color 0.3s;
     font-family: 'Arial', sans-serif;
   }
   
   /* Contenedor principal de la calculadora */
   .calculator {
     max-width: 320px;
-    background: var(--calculator-bg, #ffffff);
+    background: var(--calculator-bg, #f0f0f0); /* Fondo más claro o con contraste */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
   
-  /* Pantalla */
+  /* Pantalla (Título y valores de la calculadora) */
   .display {
-    background: var(--display-bg, #f1f1f1);
+    background: var(--display-bg, #333); /* Fondo oscuro para contrastar */
     padding: 15px;
     font-size: 2.2rem;
     text-align: right;
     margin-bottom: 15px;
     border-radius: 8px;
-    border: 1px solid var(--display-border, #ccc);
+    color: var(--display-text-color, #fff); /* Texto blanco para destacar */
+    border: 1px solid var(--display-border, #555);
   }
   
   /* Contenedor de botones */
@@ -44,18 +45,53 @@ body {
     font-size: 1.3rem;
     border: none;
     border-radius: 8px;
-    background: var(--button-bg, #6f7dff);
     color: var(--button-color, #fff);
     cursor: pointer;
-    transition: background 0.3s, transform 0.1s;
+    transition: var(--background) 0.3s, transform 0.1s;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  button:hover {
-    background: var(--button-hover, #5a6dff);
-    transform: translateY(-2px);
+  /* Botones de colores vibrantes */
+  button.num {
+    background: var(--button-num-bg, #ff7f50); /* Naranja */
+  }
+  
+  button.num:hover {
+    background: var(--button-num-hover, #e76a2a);
+  }
+  
+  button.operator {
+    background: var(--button-op-bg, #4caf50); /* Verde */
+  }
+  
+  button.operator:hover {
+    background: var(--button-op-hover, #45a049);
+  }
+  
+  button.clear {
+    background: var(--button-clear-bg, #f44336); /* Rojo */
+  }
+  
+  button.clear:hover {
+    background: var(--button-clear-hover, #e53935);
+  }
+  
+  button.equal {
+    background: var(--button-equal-bg, #2196f3); /* Azul */
+  }
+  
+  button.equal:hover {
+    background: var(--button-equal-hover, #1976d2);
+  }
+  
+  button.special {
+    background: var(--button-special-bg, #9c27b0); /* Morado */
+  }
+  
+  button.special:hover {
+    background: var(--button-special-hover, #8e24aa);
   }
   
   /* Botones específicos */
@@ -67,12 +103,23 @@ body {
   :root {
     --background: #fafafa;
     --text-color: #333;
-    --calculator-bg: #ffffff;
-    --display-bg: #f1f1f1;
-    --display-border: #ccc;
-    --button-bg: #6f7dff; /* Azul vibrante */
+    --calculator-bg: #f0f0f0; /* Fondo claro de la calculadora */
+    --display-bg: #333; /* Fondo oscuro para la pantalla */
+    --display-text-color: #fff; /* Texto blanco en la pantalla */
+    --display-border: #555;
+  
+    /* Colores para botones */
+    --button-num-bg: #ff7f50; /* Naranja */
+    --button-num-hover: #e76a2a;
+    --button-op-bg: #4caf50; /* Verde */
+    --button-op-hover: #45a049;
+    --button-clear-bg: #f44336; /* Rojo */
+    --button-clear-hover: #e53935;
+    --button-equal-bg: #2196f3; /* Azul */
+    --button-equal-hover: #1976d2;
+    --button-special-bg: #9c27b0; /* Morado */
+    --button-special-hover: #8e24aa;
     --button-color: #fff;
-    --button-hover: #5a6dff; /* Azul ligeramente más oscuro */
   }
   
   /* Modo oscuro automático */
@@ -82,9 +129,20 @@ body {
       --text-color: #eaeaea;
       --calculator-bg: #1e1e2f;
       --display-bg: #111;
+      --display-text-color: #fff;
       --display-border: #444;
-      --button-bg: #2a3dff; /* Azul más oscuro */
-      --button-color: #eaeaea;
-      --button-hover: #3b51ff; /* Azul más oscuro en hover */
+  
+      /* Colores para botones en modo oscuro */
+      --button-num-bg: #ff7f50; /* Naranja */
+      --button-num-hover: #e76a2a;
+      --button-op-bg: #4caf50; /* Verde */
+      --button-op-hover: #45a049;
+      --button-clear-bg: #f44336; /* Rojo */
+      --button-clear-hover: #e53935;
+      --button-equal-bg: #2196f3; /* Azul */
+      --button-equal-hover: #1976d2;
+      --button-special-bg: #9c27b0; /* Morado */
+      --button-special-hover: #8e24aa;
     }
   }
+  
