@@ -1,74 +1,90 @@
-/* src/styles/Calculator.css */
-
+/* Centrado y fondo global */
 body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--background);
-  color: var(--text-color);
-  transition: background 0.3s, color 0.3s;
-}
-
-.calculator {
-  max-width: 300px;
-  background: var(--calculator-bg);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.display {
-  background: var(--display-bg);
-  padding: 10px;
-  font-size: 2rem;
-  text-align: right;
-  margin-bottom: 10px;
-  border-radius: 8px;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-button {
-  padding: 20px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 8px;
-  background: var(--button-bg);
-  color: var(--button-color);
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: var(--button-hover);
-}
-
-/* Variables por defecto (modo claro) */
-:root {
-  --background: #f2f2f2;
-  --text-color: #000;
-  --calculator-bg: #ffffff;
-  --display-bg: #eaeaea;
-  --button-bg: #d0d0e0;
-  --button-color: #000;
-  --button-hover: #b0b0c0;
-}
-
-/* Modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --text-color: #ffffff;
-    --calculator-bg: #1e1e2f;
-    --display-bg: #111;
-    --button-bg: #2a2a3f;
-    --button-color: #ffffff;
-    --button-hover: #444466;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background, #fafafa);
+    color: var(--text-color, #333);
+    transition: background 0.3s, color 0.3s;
+    font-family: 'Arial', sans-serif;
   }
-}
+  
+  /* Contenedor principal de la calculadora */
+  .calculator {
+    max-width: 320px;
+    background: var(--calculator-bg, #ffffff);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Pantalla */
+  .display {
+    background: var(--display-bg, #f1f1f1);
+    padding: 15px;
+    font-size: 2.2rem;
+    text-align: right;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--display-border, #ccc);
+  }
+  
+  /* Contenedor de botones */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  /* Estilo de los botones */
+  button {
+    padding: 20px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 8px;
+    background: var(--button-bg, #6f7dff);
+    color: var(--button-color, #fff);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  button:hover {
+    background: var(--button-hover, #5a6dff);
+    transform: translateY(-2px);
+  }
+  
+  /* Botones específicos */
+  button:active {
+    transform: translateY(2px);
+  }
+  
+  /* Variables por defecto (modo claro) */
+  :root {
+    --background: #fafafa;
+    --text-color: #333;
+    --calculator-bg: #ffffff;
+    --display-bg: #f1f1f1;
+    --display-border: #ccc;
+    --button-bg: #6f7dff; /* Azul vibrante */
+    --button-color: #fff;
+    --button-hover: #5a6dff; /* Azul ligeramente más oscuro */
+  }
+  
+  /* Modo oscuro automático */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: #121212;
+      --text-color: #eaeaea;
+      --calculator-bg: #1e1e2f;
+      --display-bg: #111;
+      --display-border: #444;
+      --button-bg: #2a3dff; /* Azul más oscuro */
+      --button-color: #eaeaea;
+      --button-hover: #3b51ff; /* Azul más oscuro en hover */
+    }
+  }
