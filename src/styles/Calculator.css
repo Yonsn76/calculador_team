@@ -16,7 +16,7 @@ body {
   background: var(--calculator-bg);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(76, 104, 78, 0.5);
 }
 
 .display {
