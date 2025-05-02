@@ -84,6 +84,7 @@ Cada integrante debe crear su propia rama con su nombre:
 ```bash
 # Asegúrate de estar en main actualizado
 git checkout main
+git pull origin main
 
 # Crea y cambia a tu rama
 git checkout -b jordy        # ejemplo para Jordy
@@ -97,7 +98,23 @@ git commit -m "Tu mensaje descriptivo"
 git push origin jordy        # cambia 'jordy' por tu rama
 ```
 
-Cuando se termine una parte, se puede hacer un pull request desde GitHub para revisar e integrar en `main`.
+---
+
+## 🔁 Cómo actualizar tu rama con los cambios del `main`
+
+Desde tu rama (por ejemplo, `juan`):
+
+```bash
+git checkout juan
+git fetch origin
+git merge origin/main
+```
+
+Si prefieres rebase en lugar de merge:
+
+```bash
+git rebase origin/main
+```
 
 ---
 
@@ -108,5 +125,12 @@ Este proyecto es parte de una práctica colaborativa para fortalecer habilidades
 * Componentización en React
 * Trabajo en equipo con ramas
 * Control de versiones con Git y GitHub
+
+🧭 **Flujo de ramas recomendado**:
+
+* Crear rama personal desde `main`
+* Trabajar y hacer commits en tu rama
+* Sincronizar tu rama frecuentemente con `main`
+* Hacer pull request para integrar cambios al proyecto final
 
 ¡Gracias por visitar nuestro repositorio! 💻✨
