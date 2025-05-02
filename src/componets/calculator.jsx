@@ -16,17 +16,25 @@ export const Calculator = () => {
   const [input, setInput] = useState("");
 
   const handleClick = (value) => {
+    const operators = ["/", "*", "-", "+"];
     if (value === "C") {
       setInput("");
     } else if (value === "=") {
       setInput(evaluateExpression(input));
     } else {
       const lastChar = input[input.length - 1];
-      const operators = ["/", "*", "-", "+"];
       if (operators.includes(value) && operators.includes(lastChar)) {
-        return;
+        
+        if (input === "" && operators.includes(value)) {
+          return; 
+        }
+        
+        setInput((prev) => prev.slice(0, -1) + value);
+      } else {
+        
+        setInput((prev) => prev + value);
       }
-      setInput((prev) => prev + value);
+      
     }    
   };
 
