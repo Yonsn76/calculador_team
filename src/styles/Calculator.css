@@ -29,6 +29,10 @@ body {
     margin-bottom: 15px;
     border-radius: 8px;
     border: 1px solid var(--display-border, #ccc);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-height: 60px; /* Asegura una altura mínima */
   }
   
   /* Contenedor de botones */
