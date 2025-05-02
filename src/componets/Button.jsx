@@ -1,13 +1,10 @@
-export const Button = ({ value, onClick }) => {
+// Componente Button.jsx
 
+export const Button = ({ value, onClick }) => {
     return (
-   
-     <button xx={() => onClick(value)}>
-   
-      {value}
-   
-     </button>
-   
+      <button onClick={() => onClick(value)}>
+        {value}
+      </button>
     );
-   
-   };
+  };
+  
