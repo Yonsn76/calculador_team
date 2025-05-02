@@ -17,6 +17,13 @@ function App() {
         <span>o</span>
         <span>r</span>
         <span>a</span>
+        <span className="space"> </span> {}
+        <span>R</span>
+        <span>e</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+
       </div>
       <Calculator />
     </div>
