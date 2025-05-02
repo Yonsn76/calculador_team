@@ -1,5 +1,5 @@
 // src/App.jsx
-import { Calculator } from "./components/Calculator";
+import { Calculator } from "./componets/calculator";
 
 function App() {
   return (
