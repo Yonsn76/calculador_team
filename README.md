@@ -26,14 +26,19 @@ Este proyecto es una **calculadora funcional** creada con **React + Vite** como 
 
 ```
 src/
+├── assets/
+│   └── react.svg          # Logo de React
 ├── components/
 │   ├── Button.jsx         # Componente de botón reutilizable
 │   └── Calculator.jsx     # Componente principal de calculadora
 ├── logic/
 │   └── CalculatorLogic.js # Lógica de operaciones matemáticas
 ├── styles/
-│   └── Calculator.css     # Estilos visuales base
+│   ├── Calculator.css     # Estilos visuales base
+│   └── AnimatedTitle.css  # Estilos para el título animado
+├── App.css                # Estilos para el componente App
 ├── App.jsx                # Integración general
+├── index.css              # Estilos globales
 └── main.jsx               # Punto de entrada
 ```
 
@@ -72,7 +77,7 @@ npm install
 4. Ejecuta en modo desarrollo:
 
 ```bash
-npm run dev
+npm run papi
 ```
 
 ---
